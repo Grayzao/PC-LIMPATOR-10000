@@ -11,7 +11,7 @@
     <img src="https://img.shields.io/badge/Interface-.NET%20WPF%20Dark%20Pro-161821?style=for-the-badge&logo=dotnet&logoColor=white" alt="WPF Dark UI" />
     <img src="https://img.shields.io/badge/Motor-PowerShell%20%2B%20C%23%20Nativo-22C55E?style=for-the-badge" alt="Motor Nativo" />
     <img src="https://img.shields.io/badge/Elevação-Admin%20UAC-EF4444?style=for-the-badge" alt="Admin UAC" />
-    <img src="https://img.shields.io/badge/Versão-1.0.1-10B981?style=for-the-badge" alt="Versão 1.0.1" />
+    <img src="https://img.shields.io/badge/Versão-1.0.2-10B981?style=for-the-badge" alt="Versão 1.0.2" />
   </p>
 </div>
 
@@ -146,5 +146,6 @@ PC LIMPATOR 10000/
 
 ## Histórico de Versões
 
+- **v1.0.2** — Corrige o PC LIMPATOR que abria após reiniciar (`-Modo Continuar`) e ficava parado em "Pronto para iniciar.": a continuação pós-reinício agora inicia **automaticamente**, a tarefa agendada aponta para o próprio `.exe` (ou para a interface no modo código-fonte) e o `.exe` repassa `-Modo Continuar` ao motor. Corrige também o travamento das instalações via `winget` (saída redirecionada sem leitura causava deadlock), downloads lentos no segundo plano, e erros de uma etapa não interrompem mais as demais (todos aparecem no console). Ao abrir uma versão nova com continuação pendente, o programa oferece retomar na hora.
 - **v1.0.1** — Debloat agora é **100% nativo** (remoção segura de Appx + pacotes provisionados com tratamento individual de erros e ajustes de registro), sem baixar o script externo Win11Debloat e sem o erro de **Acesso negado**.
 - **v1.0.0** — Lançamento inicial do PC LIMPATOR 10.000.
