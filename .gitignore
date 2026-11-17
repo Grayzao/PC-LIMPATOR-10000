@@ -1,0 +1,6 @@
+# Código-fonte, backups e scripts locais permanecem apenas no disco local
+Source/
+Backup_Original/
+LimpezaPC.ps1
+INICIAR LIMPEZA.bat
+Executavel/*.rar
