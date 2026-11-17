@@ -11,7 +11,7 @@
     <img src="https://img.shields.io/badge/Interface-.NET%20WPF%20Dark%20Pro-161821?style=for-the-badge&logo=dotnet&logoColor=white" alt="WPF Dark UI" />
     <img src="https://img.shields.io/badge/Motor-PowerShell%20%2B%20C%23%20Nativo-22C55E?style=for-the-badge" alt="Motor Nativo" />
     <img src="https://img.shields.io/badge/Elevação-Admin%20UAC-EF4444?style=for-the-badge" alt="Admin UAC" />
-    <img src="https://img.shields.io/badge/Versão-10.000%20Pro-10B981?style=for-the-badge" alt="Versão 10.000 Pro" />
+    <img src="https://img.shields.io/badge/Versão-1.0.1-10B981?style=for-the-badge" alt="Versão 1.0.1" />
   </p>
 </div>
 
@@ -83,7 +83,7 @@ Executa uma manutenção profunda dividida em etapas inteligentes que preservam 
    - Ajuste de efeitos visuais para melhor desempenho e revisão de programas de inicialização no Gerenciador de Tarefas.
    - Ativação do plano de energia **Alto Desempenho / Desempenho Máximo** e desativação opcional da hibernação (`hiberfil.sys`) para liberar espaço em disco.
    - Otimização da pilha de rede (`Flush DNS`, reset de catálogo Winsock e ajuste de `TCP Auto-Tuning`).
-   - Integração opcional com **`Win11Debloat`**, ajustes de **Privacidade** (remoção de telemetria `DiagTrack`, ID de publicidade e sugestões), **Personalização** (Modo Escuro, extensões de arquivo visíveis, barra de tarefas limpa) e reparo de integridade com **`DISM /RestoreHealth`** + **`sfc /scannow`**.
+   - **Debloat nativo embutido** (100% PowerShell, sem baixar scripts externos), ajustes de **Privacidade** (remoção de telemetria `DiagTrack`, ID de publicidade e sugestões), **Personalização** (Modo Escuro, extensões de arquivo visíveis, barra de tarefas limpa) e reparo de integridade com **`DISM /RestoreHealth`** + **`sfc /scannow`**.
 
 ---
 
@@ -91,7 +91,7 @@ Executa uma manutenção profunda dividida em etapas inteligentes que preservam 
 
 Automatiza por completo a preparação de um Windows recém-instalado do zero:
 
-- **Debloat Inicial (`Win11Debloat`):** Remove aplicativos pré-instalados desnecessários antes das instalações principais.
+- **Debloat Inicial Nativo (embutido):** Remove aplicativos pré-instalados desnecessários (Clipchamp, Cortana, Bing News/Weather/Finance/Sports/Search, Dicas, Office Hub, Solitaire, People, Power Automate, To Do, Feedback Hub, Mapas, Filmes e TV, Outlook novo, Dev Home e Copilot) e desativa Bing/sugestões/conteúdo patrocinado no Iniciar — sem downloads externos e sem erros de "Acesso negado". Microsoft Store, Terminal, Calculadora, Fotos, Xbox e Spotify são preservados.
 - **Todos os Runtimes Essenciais:** Instala automaticamente bibliotecas **Visual C++ Redistributable (2005 a 2022, x86/x64)**, **.NET Desktop Runtime (6, 8, 9 e 10)**, **.NET Framework 3.5 e 4.8**, **DirectX**, **XNA Framework** e **Java JRE**.
 - **Programas do Dia a Dia (via `winget`):** Instalação silenciosa e personalizável de **Google Chrome**, **Discord**, **Steam**, **7-Zip**, **WinRAR**, **VLC Player** e **Spotify**.
 - **Detecção Automática de GPU por Vendor ID PCI:** Identifica placas **NVIDIA** (`VEN_10DE`), **AMD** (`VEN_1002`) ou **Intel** (`VEN_8086`), instala drivers via Windows Update e baixa/instala o aplicativo oficial do fabricante (**NVIDIA App**, **AMD Software: Adrenalin Edition** ou **Intel Driver & Support Assistant**).
@@ -140,4 +140,11 @@ PC LIMPATOR 10000/
 └── README.md                    # Documentação oficial
 ```
 
-> **Requisitos:** Windows 10 ou Windows 11 (x64), privilégios de Administrador e conexão com a internet para etapas de drivers, `winget`, `Win11Debloat`, `RAMMap` e Windows Update.
+> **Requisitos:** Windows 10 ou Windows 11 (x64), privilégios de Administrador e conexão com a internet para etapas de drivers, `winget`, `RAMMap` e Windows Update.
+
+---
+
+## Histórico de Versões
+
+- **v1.0.1** — Debloat agora é **100% nativo** (remoção segura de Appx + pacotes provisionados com tratamento individual de erros e ajustes de registro), sem baixar o script externo Win11Debloat e sem o erro de **Acesso negado**.
+- **v1.0.0** — Lançamento inicial do PC LIMPATOR 10.000.
